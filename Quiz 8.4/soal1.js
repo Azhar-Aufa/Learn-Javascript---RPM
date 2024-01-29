@@ -8,6 +8,8 @@ Diberikan sebuah function palindrome(kata) yang menerima satu parameter. Functio
 
 let palindrome = (kata) => kata == kata.split("").reverse().join("");
 
+console.log(kakak)
+
 // TEST CASES
 console.log(palindrome("katak")); // true
 console.log(palindrome("blanket")); // false
