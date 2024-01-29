@@ -3,30 +3,27 @@ Buatlah sebuah fungsi dengan nama dataHandling dengan sebuah parameter untuk men
 Tugas kamu adalah mengimplementasikan fungsi dataHandling agar dapat menampilkan data-data pada dari argumen seperti di bawah ini:
 */
 
-function dataHandling(input){
-    let hasil = ' '
+function dataHandling(input) {
+  let hasil = " ";
 
-    for (let i = 0; i < input.length; i++) {
-        let [id, name, address, ttl, hobby] = input[i]
+  for (let i = 0; i < input.length; i++) {
+    let [id, name, address, ttl, hobby] = input[i];
 
-        hasil += `Nomor ID: ${id} \n Nama Lengkap: ${name} \n Alamat: ${address} \n TTL: ${ttl} \n Hobi: ${hobby} \n \n`
-    }
-    return hasil
+    hasil += `Nomor ID: ${id} \n Nama Lengkap: ${name} \n Alamat: ${address} \n TTL: ${ttl} \n Hobi: ${hobby} \n \n`;
+  }
+  return hasil;
 }
 
 let input = [
-    ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
-    ["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"],
-    ["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],
-    ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
-]
+  ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
+  ["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"],
+  ["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],
+  ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"],
+];
 
-const datas = dataHandling(input)
+const datas = dataHandling(input);
 
-console.log(datas)
-
-
-
+console.log(datas);
 
 /*
 output yang diharapkan
@@ -51,7 +48,3 @@ Nama Lengkap:  Bintang Senjaya
 TTL:  Martapura 6/4/1970
 Hobi:  Berkebun
 */
-
-
-
-
