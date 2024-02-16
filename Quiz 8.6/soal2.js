@@ -1,15 +1,36 @@
 /*
 Diberikan sebuah function perkalianUnik(arr) yang menerima satu parameter berupa array yang berisikan angka. Function akan me-return array baru yang mengandung angka yang setiap nilainya merupakan hasil kali angka lain yang bukan angka itu sendiri. Contoh, jika arr adalah [1, 2, 3, 4, 5], maka function akan mereturn [120, 60, 40, 30, 24], karena 120 adalah 2 * 3 * 4 * 5, 60 adalah 1 * 3 * 4 * 5, 40 adalah 1 * 2 * 4 * 5, dan seterusnya.
 */
-function perkalianUnik(arr) {
-    return arr.map(function (n, i) {
-      let a = 1;
-      arr.forEach(function (x, idx) {
-        if (idx !== i) a *= x;
-      });
-      return a;
-    });
-  }
+
+
+
+// function perkalianUnik(arr) {
+//   return arr.map( function (num, i) {
+//     let a = 1;
+//     arr.forEach( (n, idx) =>  idx !== i ? (a *= n) : undefined);
+//     return a; 
+//   })
+//   }
+
+// const perkalianUnik = (arr) => arr.map( function (num, i) {
+//   let a = 1;
+//   arr.forEach( (n, idx) => (idx !== i) ? a *= n : undefined);
+//   return a; 
+// });
+
+
+const perkalianUnik = (arr) => arr.map(function(num, i) {
+  let a = 1;
+  arr.forEach((n, idx) => (i !== idx) ? a *= n : undefined);
+  return a;
+});
+
+      
+  
+    
+  
+
+
 
 
   // TEST CASES
