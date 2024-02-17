@@ -1,15 +1,18 @@
-//tentukan apakah ini deret aritmatika atau bukan
+// tentukan apakah ini deret aritmatika atau bukan
 function tentukanDeretAritmatika(arr) {
-        let gap = arr[1] - arr[0];
-        for (let i = 1; i <= arr.length - 2; i++) {
-          let selisih = arr[i + 1] - arr[i];
-          if (selisih != gap) {
-            return false;
-          }
-        }
-        return true;
-      
+  let element = arr[1] - arr[0];
+  for (let i = 0; i < arr.length - 1; i++) {
+      let factor = arr[i + 1] - arr[i];
+      if (factor != element) {
+          return false;
+      }
   }
+  return true;  
+};
+  
+
+
+
   
   // TEST CASES
   console.log(tentukanDeretAritmatika([1, 2, 3, 4, 5, 6])); // true
