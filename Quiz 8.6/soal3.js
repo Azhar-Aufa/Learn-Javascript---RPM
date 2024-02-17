@@ -8,7 +8,7 @@ const tentukanDeretAritmatika = (arr) => {
       }
   }
   return true;  
-};
+}
   
 
 
