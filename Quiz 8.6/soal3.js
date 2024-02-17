@@ -1,5 +1,5 @@
 // tentukan apakah ini deret aritmatika atau bukan
-function tentukanDeretAritmatika(arr) {
+const tentukanDeretAritmatika = (arr) => {
   let element = arr[1] - arr[0];
   for (let i = 0; i < arr.length - 1; i++) {
       let factor = arr[i + 1] - arr[i];
