@@ -2,8 +2,8 @@
 //saran sih pake bubblesort walau tidak efisien tapi bagus buat belajar sorting
 function urutkanAbjad(str) {
     let arr = str.split("");
-    for(let i = 0;i<=arr.length-1;i++) {
-      for(let j = 0;j<=arr.length-1;j++) {
+    for(let i = 0;i<=arr.length;i++) {
+      for(let j = 0;j<=arr.length;j++) {
         if(arr[j]>arr[j+1]) {
           let temp = arr[j];
           arr[j] = arr[j+1];
@@ -13,7 +13,8 @@ function urutkanAbjad(str) {
     }
     return arr.join("");
   }
-  
+
+
   // TEST CASES
   console.log(urutkanAbjad('hello')); // 'ehllo'
   console.log(urutkanAbjad('truncate')); // 'acenrttu'

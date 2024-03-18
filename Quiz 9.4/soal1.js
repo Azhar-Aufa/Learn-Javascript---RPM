@@ -18,18 +18,18 @@ Return 2
 */
 function digitPerkalianMinimum(angka) {
     let faktor = [];
-    let result = [];
-    for(let i = 1;i<=angka;i++) {
+    let hasil = [];
+    for(let i = 0;i<=angka;i++) {
       if(angka % i === 0)faktor.push(i);  
     }
-    for(let j = 0;j<=faktor.length-1;j++) {
-      for(let k = faktor.length-1;k >= 0; k--) {
+    for(let j = 0;j<=faktor.length;j++) {
+      for(let k = faktor.length;k >= 0; k--) {
         let kali = faktor[j] * faktor[k]
-        if(kali === angka) result.push(`${faktor[j]}${faktor[k]}`);
+        if(kali === angka) hasil.push(`${faktor[j]}${faktor[k]}`);
       }
     }
-    result.sort((a, b) => a-b);
-    return result[0].length;
+    hasil.sort((a, b) => a-b);
+    return hasil[0].length;
   }
   console.log(digitPerkalianMinimum(24));
   console.log(digitPerkalianMinimum(90));
